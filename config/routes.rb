@@ -14,5 +14,13 @@ Rails.application.routes.draw do
     get "login", :to => "users/sessions#new"
     delete "logout", :to => "users/sessions#destroy"
   end
-  resources :products
+  
+  resource :users, only: [:edit, :update] do
+    collection do
+    get "mypage", :to => "users#mypage"
+    get "mypage/edit", :to => "users#edit"
+    get "mypage/address/edit", :to => "users#edit_address"
+    put "mypage", :to => "users#update"
+   end
+  end
 end

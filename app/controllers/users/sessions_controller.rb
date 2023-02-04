@@ -19,7 +19,7 @@ class Users::SessionsController < Devise::SessionsController
   # end
   
 def after_sign_in_path_for(user)
-     root_path
+     mypage_users_path
 end
  
 def after_sign_out_path_for(user)
@@ -31,6 +31,6 @@ end
 
   #If you have extra params to permit, append them to the sanitizer.
    def configure_sign_in_params
-     devise_parameter_sanitizer.permit(:sign_in, keys: [ :first_name, :email, :password, :password_confirmation ])
+     devise_parameter_sanitizer.permit(:sign_in, keys: [ :first_name, :last_name, :email, :password, :password_confirmation ])
    end
 end
