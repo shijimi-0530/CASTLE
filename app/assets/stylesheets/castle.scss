@@ -1,3 +1,8 @@
+body {
+  max-width:1800px;
+  margin: 0 auto 0 auto;
+}
+
 .castle-login-input {
   border-radius: 2px;
   border: solid 1px #b2b2b2;
@@ -87,5 +92,60 @@
 .castle-header-fav-icon {
   color: #191919;
 }
+.header-frame {
+  width: 100%;
+}
 
+.header_mypage_topimage {
+  position: relative;
+}
+
+.header-cover__actions {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+}
+
+.btn-setting {
+    color: #595960;
+    text-align: right;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    background: transparent;
+    overflow-wrap: break-word;
+}
+
+.c-btn.c-btn--s {
+    overflow-wrap: break-word;
+    font: inherit;
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    outline: none;
+    border: 1px solid #d2d2d2;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 0 1px #fff inset,0 1px 0 rgba(0,0,0,0.1);
+    color: #13131e;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    vertical-align: middle;
+    line-height: normal;
+    appearance: none;
+    padding: 0.6rem 1.2rem;
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #fff,#f4f4f4);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
 

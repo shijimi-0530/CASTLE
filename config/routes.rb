@@ -19,7 +19,6 @@ Rails.application.routes.draw do
     collection do
     get "mypage", :to => "users#mypage"
     get "mypage/edit", :to => "users#edit"
-    get "mypage/address/edit", :to => "users#edit_address"
     put "mypage", :to => "users#update"
    end
   end

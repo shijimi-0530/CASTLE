@@ -5,14 +5,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user.update_without_current_password(user_params)
+    @user.update_without_password(user_params)
     redirect_to mypage_users_url
   end
 
   def mypage
-  end
-
-  def edit_address
   end
 
   private

@@ -1,30 +1,9 @@
 <div class="container d-flex justify-content-center mt-3">
-  <div class="w-50">
+  <div class="w-100">
+
+    <br></br>
     
-    <h1>マイページ</h1>
-
-    <hr>
-
-    <div class="container">
-      <div class="d-flex justify-content-between">
-        <div class="row">
-          <div class="col-2 d-flex align-items-center">
-            <i class="fas fa-user fa-3x"></i>
-          </div>
-          <div class="col-9 d-flex align-items-center ml-2 mt-3">
-            <div class="d-flex flex-column">
-              <label for="user-name">会員情報の編集</label>
-              <p>アカウント情報の編集</p>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex align-items-center">
-          <%= link_to mypage_edit_users_path do %>
-            <i class="fas fa-chevron-right fa-2x"></i>
-          <% end %>
-        </div>
-      </div>
-    </div>
+    <h1>マイページ設定</h1>
 
     <hr>
 
@@ -49,29 +28,6 @@
       </div>
     </div>
 
-    <hr>
-    
-    <div class="container">
-      <div class="d-flex justify-content-between">
-        <div class="row">
-          <div class="col-2 d-flex align-items-center">
-            <i class="fas fa-map-marked fa-3x"></i>
-          </div>
-          <div class="col-9 d-flex align-items-center ml-3 mt-3">
-            <div class="d-flex flex-column">
-              <label for="user-name">お届け先の変更</label>
-              <p>登録住所の変更</p>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex align-items-center">
-          <%= link_to mypage_address_edit_users_path do %>
-            <i class="fas fa-chevron-right fa-2x"></i>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    
     <hr>
 
     <div class="container">

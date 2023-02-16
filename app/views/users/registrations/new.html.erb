@@ -8,34 +8,8 @@
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <div class="form-group row">
 
-          <%= f.label :first_name, "", class: "col-md-5 col-form-label text-md-left" do %>
-            性
-            <span class="ml-1 castle-require-input-label">
-              <span class="castle-require-input-label-text">必須</span>
-            </span>
-          <% end %>
-
-          <div class="col-md-7">
-            <%=
-              f.text_field :first_name,
-              class: "form-control #{"is-invalid" if resource.errors.messages[:first_name].present? } castle-login-input",
-              autofocus: "true",
-              required: "",
-              autocomplete: "first_name",
-              placeholder: "城"
-            %>
-
-            <% if resource.errors.messages[:first_name].present? %>
-              <span class="castle-error-message">
-                <strong><%= resource.errors.full_messages_for(:first_name).first %></strong>
-              </span>
-            <% end %>
-          </div>
-        </div>
-        
-        <div class="form-group row">
           <%= f.label :last_name, "", class: "col-md-5 col-form-label text-md-left" do %>
-          名
+            性
             <span class="ml-1 castle-require-input-label">
               <span class="castle-require-input-label-text">必須</span>
             </span>
@@ -48,12 +22,38 @@
               autofocus: "true",
               required: "",
               autocomplete: "last_name",
-              placeholder: "太郎"
+              placeholder: "城"
             %>
 
             <% if resource.errors.messages[:last_name].present? %>
               <span class="castle-error-message">
                 <strong><%= resource.errors.full_messages_for(:last_name).first %></strong>
+              </span>
+            <% end %>
+          </div>
+        </div>
+        
+        <div class="form-group row">
+          <%= f.label :first_name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          名
+            <span class="ml-1 castle-require-input-label">
+              <span class="castle-require-input-label-text">必須</span>
+            </span>
+          <% end %>
+
+          <div class="col-md-7">
+            <%=
+              f.text_field :first_name,
+              class: "form-control #{"is-invalid" if resource.errors.messages[:first_name].present? } castle-login-input",
+              autofocus: "true",
+              required: "",
+              autocomplete: "first_name",
+              placeholder: "太郎"
+            %>
+
+            <% if resource.errors.messages[:first_name].present? %>
+              <span class="castle-error-message">
+                <strong><%= resource.errors.full_messages_for(:first_name).first %></strong>
               </span>
             <% end %>
           </div>
