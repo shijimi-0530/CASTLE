@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  content: MyString
+  region: 1
+  prefectures: 1
+  lord: MyString
+  construction_year: MyString
+  image: MyString
+
+two:
+  name: MyString
+  content: MyString
+  region: 1
+  prefectures: 1
+  lord: MyString
+  construction_year: MyString
+  image: MyString

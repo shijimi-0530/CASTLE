@@ -1,0 +1,15 @@
+<h1>Castles#index</h1>
+ <% @castles.each do |castle| %>
+   <%= castle.name %>
+   <%= castle.content %>
+   <%= castle.region %>
+   <%= castle.prefectures %>
+   <%= castle.lord %>
+   <%= castle.construction_year %>
+   <%= castle.image %>
+   <%= link_to "Show", castle_path(castle) %>
+   <%= link_to "Edit", edit_castle_path(castle) %>
+   <%= link_to "Delete", castle_path(castle), method: :delete, data: { confirm: 'Are you sure?' }  %>
+ <% end %>
+ 
+ <%= link_to "New", new_castle_path %>

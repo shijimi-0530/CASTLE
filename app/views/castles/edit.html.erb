@@ -1,0 +1,15 @@
+<h1>Update Castles</h1>
+ 
+ <%= form_with model: @castle do |f| %>
+   <%= castle.name %>
+   <%= castle.content %>
+   <%= castle.region %>
+   <%= castle.prefectures %>
+   <%= castle.lord %>
+   <%= castle.construction_year %>
+   <%= castle.image %>
+   <%= f.submit "Update" %>
+ <% end %>
+ 
+ <%= link_to "Back", castles_path %>
+
