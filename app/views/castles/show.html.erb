@@ -1,11 +1,61 @@
-<h1>Castles#show</h1>
+<h1>城の一覧</h1>
 
-   <%= @Castle.name %>
-   <%= @Castle.content %>
-   <%= @Castle.region %>
-   <%= @Castle.prefectures %>
-   <%= @Castle.lord %>
-   <%= @Castle.construction_year %>
-   <%= @Castle.image %>
+<%= form_with model: @castle do |f| %>
+<div class="card mb-3" style="max-width: 1580px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." alt="...">
+    </div>
+    
+        <div class="card-body">
+    
+        <div class="col-md-8">
+         <div class="form-group row">
+            <%= f.label "城名", class: "col-sm-2 col-form-label"%><br/>
+            <%= f.label @castle.name, class: "col-sm-10 col-form-label"%>
+         </div>
+        </div>
+
+        <div class="col-md-8">
+         <div class="form-group row">
+            <%= f.label "通称・別名", class: "col-sm-2 col-form-label"%><br/>
+            <%= f.label @castle.content, class: "col-sm-10 col-form-label"%>
+         </div>
+        </div>     
+
+        <div class="col-md-8">
+         <div class="form-group row">
+            <%= f.label "地方", class: "col-sm-2 col-form-label"%><br/>
+            <%= f.label @castle.region, class: "col-sm-10 col-form-label"%>
+         </div>
+        </div>
+        
+        <div class="col-md-8">
+         <div class="form-group row">
+            <%= f.label "都道府県", class: "col-sm-2 col-form-label"%><br/>
+            <%= f.label @castle.region, class: "col-sm-10 col-form-label"%>
+         </div>
+        </div>
+        
+        <div class="col-md-8">
+         <div class="form-group row">
+            <%= f.label "城主", class: "col-sm-2 col-form-label"%><br/>
+            <%= f.label @castle.lord, class: "col-sm-10 col-form-label"%>
+         </div>
+        </div>
+
+        <div class="col-md-8">
+         <div class="form-group row">
+            <%= f.label "築城年", class: "col-sm-2 col-form-label"%><br/>
+            <%= f.label @castle.construction_year, class: "col-sm-10 col-form-label"%>
+         </div>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>
  
- <%= link_to "Back", castle_path %>
+ <%= link_to "Back", castles_path %>

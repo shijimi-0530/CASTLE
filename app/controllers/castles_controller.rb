@@ -1,6 +1,6 @@
 class CastlesController < ApplicationController
   def index
-     @castles = Castle.all
+    @castles = Castle.all
   end
 
   def show
@@ -12,7 +12,7 @@ class CastlesController < ApplicationController
   end
 
   def create
-    @castle = castle.new(castle_params)
+    @castle = Castle.new(castle_params)
     @castle.save
     redirect_to castle_url @castle
 
@@ -29,7 +29,7 @@ class CastlesController < ApplicationController
   end
 
   def destroy
-    @castle = castle.find(params[:id])
+    @castle = Castle.find(params[:id])
     @castle.destroy
     redirect_to castles_url
   end

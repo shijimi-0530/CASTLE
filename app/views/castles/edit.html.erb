@@ -1,13 +1,13 @@
-<h1>Update Castles</h1>
+ <h1>Update Castles</h1>
  
  <%= form_with model: @castle do |f| %>
-   <%= castle.name %>
-   <%= castle.content %>
-   <%= castle.region %>
-   <%= castle.prefectures %>
-   <%= castle.lord %>
-   <%= castle.construction_year %>
-   <%= castle.image %>
+   <%= f.text_field :name %>
+   <%= f.text_field :content %>
+   <%= f.text_area :region %>
+   <%= f.text_area :prefectures %>
+   <%= f.text_field :lord %>
+   <%= f.text_field :construction_year %>
+   <%= f.text_field :image %>
    <%= f.submit "Update" %>
  <% end %>
  
