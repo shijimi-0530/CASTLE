@@ -1,6 +1,7 @@
 class CastlesController < ApplicationController
   def index
     @castles = Castle.all
+    @user = current_user
   end
 
   def show

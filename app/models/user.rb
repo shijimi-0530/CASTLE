@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable #←confirmableを追加
   
-  enum gender: { 男性: 0, 女性: 1}
+  enum gender: { man: 0, woman: 1}
          
 end

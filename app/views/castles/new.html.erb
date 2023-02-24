@@ -31,7 +31,7 @@
          <div class="form-group row">
             <%= f.label "地方", class: "col-sm-2 col-form-label"%><br/>
             <div class="col-sm-10">
-              <%= f.select :region, Castle.region_areas.keys, {} , class: 'form-control'%>
+              <%= f.select :region_area, Castle.region_areas.keys, {} , class: 'form-control'%>
             </div>
          </div>
         </div>
@@ -40,7 +40,7 @@
          <div class="form-group row">
             <%= f.label "都道府県", class: "col-sm-2 col-form-label"%><br/>
             <div class="col-sm-10">
-              <%= f.select :prefectures, Castle.prefectures_areas.keys, {} , class: 'form-control'%>
+              <%= f.select :prefectures_area, Castle.prefectures_areas.keys, {} , class: 'form-control'%>
             </div>
          </div>
         </div>

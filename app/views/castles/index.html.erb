@@ -2,14 +2,18 @@
  <% @castles.each do |castle| %>
    <%= castle.name %>
    <%= castle.content %>
-   <%= castle.region %>
+   <%= castle.region_area %>
    <%= castle.prefectures %>
-   <%= castle.lord %>
+   <%= castle.lord %> s
    <%= castle.construction_year %>
    <%= castle.image %>
-   <%= link_to "Show", castle_path(castle) %>
-   <%= link_to "Edit", edit_castle_path(castle) %>
-   <%= link_to "Delete", castle_path(castle), method: :delete, data: { confirm: 'Are you sure?' }  %>
- <% end %>
- 
- <%= link_to "New", new_castle_path %>
+    <% if @user.admin == true %>
+     <%= link_to "Show", castle_path(castle) %>
+     <%= link_to "Edit", edit_castle_path(castle) %>
+     <%= link_to "Delete", castle_path(castle), method: :delete, data: { confirm: 'Are you sure?' }  %>
+     <%= link_to "New", new_castle_path %>
+    <% else %>
+     <%= link_to "Show", castle_path(castle) %>
+    <% end %>
+  <% end %>
+  
